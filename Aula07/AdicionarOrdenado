@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ListaEstaticaOrdenada
+{
+    class ListaEstatica
+    {
+        private int[] vetor;
+        private int nroElem;
+
+        public int NroElem { get => nroElem; set => nroElem = value; }
+
+        public ListaEstatica(int tamanho)
+        {
+            this.vetor = new int[tamanho];
+            nroElem = 0;
+        }
+
+        public int Adicionar(int elem)
+        {
+            if (this.nroElem < vetor.Length)
+            {
+                vetor[nroElem] = elem;
+                nroElem++;
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        public void Exibir()
+        {
+            for (int i = 0; i < this.nroElem; i++)
+            {
+                Console.WriteLine(vetor[i]);
+            }
+        }
+
+        public int Buscar(int elemento)
+        {
+            for (int i = 0; i < this.nroElem; i++)
+            {
+                if (vetor[i] == elemento) return i;
+            }
+            return -1;
+        }
+
+        public int RemoverPeloIndice(int indice)
+        {
+            if (indice >= 0 && indice < nroElem)
+            {
+                for (int i = indice; i < this.nroElem - 1; i++)
+                {
+                    vetor[i] = vetor[i + 1];
+                }
+                nroElem--;
+                vetor[nroElem] = 0;
+                return 0;
+            }
+            return -1;
+        }
+
+        public int RemoverElemento(int elementoRemovido)
+        {
+            return this.RemoverPeloIndice(this.Buscar(elementoRemovido));
+        }
+
+        public int AdicionarOrdenado(int valor)
+        {
+            if (nroElem == vetor.Length) return -1;             
+            for(int i=nroElem; i>0; i--)
+            {
+                if (valor < vetor[i-1])
+                {
+                    vetor[i] = valor;
+                    nroElem++;
+                    return 0;
+                }
+                vetor[i] = vetor[i-1];                
+            }
+            vetor[0] = valor;
+            nroElem++;
+            return 0;
+        }
+    }
+}
