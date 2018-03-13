@@ -1,6 +1,0 @@
-c:\users\aluno\documents\visual studio 2017\Projects\ListaAbstrata\ListaAbstrata\bin\Debug\ListaAbstrata.exe.config
-c:\users\aluno\documents\visual studio 2017\Projects\ListaAbstrata\ListaAbstrata\bin\Debug\ListaAbstrata.exe
-c:\users\aluno\documents\visual studio 2017\Projects\ListaAbstrata\ListaAbstrata\bin\Debug\ListaAbstrata.pdb
-c:\users\aluno\documents\visual studio 2017\Projects\ListaAbstrata\ListaAbstrata\obj\Debug\ListaAbstrata.csprojResolveAssemblyReference.cache
-c:\users\aluno\documents\visual studio 2017\Projects\ListaAbstrata\ListaAbstrata\obj\Debug\ListaAbstrata.exe
-c:\users\aluno\documents\visual studio 2017\Projects\ListaAbstrata\ListaAbstrata\obj\Debug\ListaAbstrata.pdb
